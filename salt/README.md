@@ -14,7 +14,9 @@ This project provides an example baseline for [tgs salt identification challenge
 
 ## How to make predictions
 
-Now when you have trained network, you may want to do submission. To do this you need to type `musket predict --csv exp01 Test'
+Now when you have trained network, you may want to do submission. To do this you need to type 
+
+`musket predict --csv exp01 Test`
 
 
  
