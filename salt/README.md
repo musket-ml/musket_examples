@@ -1,6 +1,6 @@
 # Baseline for tgs-salt-identification-challenge
 
-This project provides an example baseline for tgs salt identification challenge.
+This project provides an example baseline for [tgs salt identification challenge](https://www.kaggle.com/c/tgs-salt-identification-challenge).
 
 ## How to run
 
