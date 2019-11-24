@@ -2,6 +2,8 @@
 
 This project provides an example baseline for [tgs salt identification challenge](https://www.kaggle.com/c/tgs-salt-identification-challenge).
 
+![Image](https://storage.googleapis.com/kaggle-media/competitions/TGS/drilling.jpg)
+
 ## How to run
 
 0) Ensure that Musket is installed, ensure that TensorFlow is installed
