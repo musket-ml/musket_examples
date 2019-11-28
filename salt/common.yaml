@@ -14,6 +14,8 @@ callbacks:
     cooldown: 5
     verbose: 1
 datasets:
+    Test:
+      getTest: []
     Train:
       getTrain: []
 dataset:
