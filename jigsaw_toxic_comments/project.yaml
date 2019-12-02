@@ -1,0 +1,2 @@
+dependencies: ['kaggle.competition://jigsaw-toxic-comment-classification-challenge',
+  'kaggle.dataset://thanakomsn/glove6b300dtxt']
