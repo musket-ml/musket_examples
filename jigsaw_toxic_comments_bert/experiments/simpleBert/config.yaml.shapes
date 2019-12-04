@@ -1,0 +1,9 @@
+!!python/tuple
+- - !!python/tuple
+    - 100
+  - !!python/tuple
+    - 100
+  - !!python/tuple
+    - 100
+- !!python/tuple
+  - 6

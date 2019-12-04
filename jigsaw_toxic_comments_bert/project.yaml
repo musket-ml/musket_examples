@@ -1,0 +1,1 @@
+dependencies: ['kaggle.dataset://maxjeblick/bert-pretrained-models','kaggle.competition://jigsaw-toxic-comment-classification-challenge']
