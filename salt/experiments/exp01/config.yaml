@@ -1,4 +1,5 @@
 #%Musket Segmentation 1.0
+imports: [datasets]
 backbone: resnet34 #let's select classifier backbone for our network 
 architecture: Unet #pre-trained model we are going to use
 augmentation: #define some minimal augmentations on images
