@@ -1,0 +1,39 @@
+#%Musket Segmentation 1.0
+backbone: resnet34 #let's select classifier backbone for our network 
+architecture: Unet #let's select segmentation architecture that we would like to use
+augmentation: 
+  Fliplr: 0.5 #let's define some minimal augmentations on images
+  Flipud: 0.5 
+classes: 1 #we have just one class (mask or no mask) 
+activation: sigmoid #one class means that our last layer should use sigmoid activation
+encoder_weights: imagenet #we would like to start from network pretrained on pascal_voc dataset
+shape: [1600, 256, 3] #This is our desired input image and mask size, everything will be resized to fit. 
+optimizer: Adam #Adam optimizer is a good default choice
+batch: 8 #Our batch size will be 8 
+metrics: #We would like to track some metrics 
+  - binary_accuracy     
+  - dice 
+folds_count: 10  
+dataset:  
+   get_segment4 : []  
+primary_metric: val_dice #and the most interesting metric is val_binary_accuracy
+primary_metric_mode: max
+testSplit: 0.2  
+lr: 0.0004
+callbacks: #Let's configure some minimal callbacks  
+  EarlyStopping:
+    patience: 15
+    monitor: val_binary_accuracy    
+    verbose: 1    
+  ReduceLROnPlateau: 
+    patience: 2
+    factor: 0.3
+    monitor: val_binary_accuracy      
+    mode: auto 
+    cooldown: 1
+    verbose: 1
+testTimeAugmentation: Horizontal     
+loss: binary_crossentropy+dice_loss #We use simple binary_crossentropy loss
+inference_batch: 8
+stages: 
+  - epochs: 25 
