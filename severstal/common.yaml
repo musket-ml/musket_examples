@@ -15,10 +15,12 @@ callbacks:
     verbose: 1
 datasets:
     classify:
-      getclassify: []
+      get_classify: []
     segment1:
-      getsegment1: []
-    data:
-      getdata: []
-dataset:
-    getdata: []
+      get_segment1: []
+    segment2:
+      get_segment2: []
+    segment3:
+      get_segment3: []
+    segment4:
+      get_segment4: []
