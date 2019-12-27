@@ -18,5 +18,5 @@ def get_segment4():
 
 @datasets.dataset_provider(origin="classify.csv",kind="MultiClassificationDataset")
 def get_classify():
-    return image_datasets.MultiClassClassificationDataSet(["severstal-steel-defect-detection/test_images","severstal-steel-defect-detection/train_images"],"severstal-steel-defect-detection/classify.csv","ImageId","Class")
+    return image_datasets.MultiClassClassificationDataSet(["severstal-steel-defect-detection/test_images","severstal-steel-defect-detection/train_images"],"severstal-steel-defect-detection/classify.csv","ImageId","ClassId")
 
