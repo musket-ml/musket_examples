@@ -9,7 +9,7 @@ activation: sigmoid #as we have multilabel classification, the activation for la
 weights: imagenet #we would like to start from network pretrained on imagenet dataset
 shape: [256,1600, 3] #our desired input image size, everything will be resized to fit
 optimizer: Adam #Adam optimizer is a good default choice
-batch: 8 #our batch size will be 16
+batch: 4 #our batch size will be 16
 lr: 0.001 
 metrics: #we would like to track some metrics
   - binary_accuracy

@@ -1,5 +1,5 @@
 #%Musket Segmentation 1.0
-backbone: resnet34 #let's select classifier backbone for our network 
+backbone: xception #let's select classifier backbone for our network 
 architecture: Unet #let's select segmentation architecture that we would like to use
 augmentation: 
   Fliplr: 0.5 #This class has few samples so augment it with wrapping besides usual fliplr/flipud
@@ -10,7 +10,7 @@ augmentation:
 classes: 1 #we have just one class (mask or no mask) 
 activation: sigmoid #one class means that our last layer should use sigmoid activation
 encoder_weights: imagenet #we would like to start from network pretrained on pascal_voc dataset
-shape: [1600, 256, 3] #This is our desired input image and mask size, everything will be resized to fit. 
+shape: [256,1600, 3] #our desired input image size, everything will be resized to fit 
 optimizer: Adam #Adam optimizer is a good default choice
 batch: 8 #Our batch size will be 8 
 metrics: #We would like to track some metrics 
