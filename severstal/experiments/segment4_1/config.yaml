@@ -37,3 +37,4 @@ loss: binary_crossentropy+dice_loss #We use simple binary_crossentropy loss
 inference_batch: 8
 stages: 
   - epochs: 25 
+    negatives: none

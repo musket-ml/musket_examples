@@ -4,7 +4,7 @@ architecture: Unet #let's select segmentation architecture that we would like to
 augmentation: 
   Fliplr: 0.5 #This class has few samples so augment it with wrapping besides usual fliplr/flipud
   Flipud: 0.5 
-  Affine:
+  AffineWithPadding:
      translate_percent: {"x": [-0.40, 0.40] }
      mode: wrap 
 classes: 1 #we have just one class (mask or no mask) 
@@ -40,3 +40,4 @@ loss: binary_crossentropy+dice_loss #We use simple binary_crossentropy loss
 inference_batch: 8
 stages: 
   - epochs: 25 
+    negatives: none
