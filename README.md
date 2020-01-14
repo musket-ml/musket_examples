@@ -5,3 +5,4 @@ This repository contains examples of what and how you may do with a Musket ML. T
 ### Image segmentation
 
 * [TGS Salt Identification Challenge](./salt/README.md)
+* [Severstal: Steel Defect Detection](./severstal/README.md)
