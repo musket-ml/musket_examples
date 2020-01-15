@@ -17,6 +17,8 @@ We decided to detect defects in two steps:
 ## Launching from DS IDE
 
 * Import project using _Import > Existing projects into workspace_
+* In PyDev explorer, richt-click the newly imported project, choose _Import..._, in the opened dialog choose _Musket > Kaggle Dataset_. In the top of the opened wizard choose _Competition_, search for `severstal` and choose found competition in the table below - should be `severstal-steel-defect-detection`. Press OK and wait until competition data will be download and unpacked.
+* Open `modules/prepare_datasets.py` from the imported project and launch to prepare image classification dataset.
 * In Musket perspective in PyDev Package Explorer or another explorer view right-click _exeriments_ subnode and choose "Show Experiments"
 * In opened Experiments view select all experiments, right-click and choose "Launch experiments"
 * In opened Launch Settings dialog configure necessary parameters and click OK
