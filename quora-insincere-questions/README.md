@@ -1,4 +1,4 @@
-# Musket example for Severstal competition
+# Musket example for Quora Insincere Questions Classification competition
 
 This is Musket example for [Quora Insincere Questions Classification](https://www.kaggle.com/c/quora-insincere-questions-classification)
 
