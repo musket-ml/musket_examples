@@ -1,3 +1,5 @@
+![Quora Logo](https://storage.googleapis.com/kaggle-organizations/407/thumbnail.png?r=95)
+
 # Musket example for Quora Insincere Questions Classification competition
 
 This is Musket example for [Quora Insincere Questions Classification](https://www.kaggle.com/c/quora-insincere-questions-classification)
@@ -7,7 +9,7 @@ Competition is aimed at predicting whether a question asked on Quora is sincere 
 ## Launching from console
 
 * Ensure you have Python 3.6, as well as Musket and Kaggle python packages with their dependencies installed, Keras installed and configured
-* In experiment root folder - `quora-insincere-questions` - in command line type `musket fit -d`. `-d` tells Musket to download dependencies - Kaggle Severstal dataset in this case - before launching experiments. If you have more than one card available - don't frget to add `--num_gpus=N` parameter, where N is an amount of your available devices
+* In experiment root folder - `quora-insincere-questions` - in command line type `musket fit -d`. `-d` tells Musket to download dependencies - Quora's insincere questiosn dataset in this case - before launching experiments. If you have more than one card available - don't forget to add `--num_gpus=N` parameter, where N is an amount of your available devices
 
 ## Launching from DS IDE
 
