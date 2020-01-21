@@ -43,4 +43,4 @@ callbacks:
     verbose: 1     
 metrics: [binary_accuracy ]    
 dataset: 
-    getTrain: []
+    get_train: []

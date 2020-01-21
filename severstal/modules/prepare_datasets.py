@@ -9,7 +9,7 @@ from pathlib import Path
 @after_download
 def prepare_ds():    
     project_dir = Path(os.path.abspath(__file__)).parents[1]
-    ds_path = os.path.join(project_dir,'data/severstal-steel-defect-detection')
+    ds_path = os.path.join(project_dir,'data')
     classify_path = os.path.join(ds_path, 'classify.csv')
     if os.path.exists(classify_path):
         print('classify.csv is already present - skipping')
@@ -30,3 +30,6 @@ def prepare_ds():
     classify_frame.to_csv(classify_path, index = False)
     print("Done dataset preparation")
     pass
+
+if __name__=='__main__':
+    prepare_ds()
