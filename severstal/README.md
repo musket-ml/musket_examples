@@ -1,3 +1,5 @@
+![Image](https://storage.googleapis.com/kaggle-competitions/kaggle/14241/logos/thumb76_76.png?t=2019-06-17-15-52-14)
+
 # Musket example for Severstal competition
 
 This is Musket example for [Severstal competition](https://www.kaggle.com/c/severstal-steel-defect-detection/overview)
