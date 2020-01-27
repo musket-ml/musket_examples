@@ -13,3 +13,11 @@ callbacks:
     mode: auto
     cooldown: 5
     verbose: 1
+
+datasets:
+    BengaliTest0:
+      getBengaliTest0: []
+    Bengali0:
+      getBengali0: []
+    Bengali1:
+      getBengali1: []
