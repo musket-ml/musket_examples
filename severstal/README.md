@@ -1,4 +1,4 @@
-![Image](https://storage.googleapis.com/kaggle-competitions/kaggle/14241/logos/thumb76_76.png?t=2019-06-17-15-52-14)
+![Image](https://storage.googleapis.com/kaggle-competitions/kaggle/14241/logos/thumb76_76.png)
 
 # Musket example for Severstal competition
 
