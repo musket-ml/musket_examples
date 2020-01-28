@@ -1,0 +1,17 @@
+allStages:
+  hmar_incorrect:
+    max: 0.9719472966517012
+    mean: 0.9719472966517012
+    min: 0.9719472966517012
+    std: 0.0
+cfgName: config.yaml
+completed: true
+folds:
+- 0
+stages:
+- hmar_incorrect:
+    max: 0.9719472966517012
+    mean: 0.9719472966517012
+    min: 0.9719472966517012
+    std: 0.0
+subsample: 1.0

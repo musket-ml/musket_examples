@@ -5,7 +5,7 @@ from musket_core import metrics
 
 
 @metrics.final_metric
-def hmar(fa, val):
+def hmar_incorrect(fa, val):
     
     gt = []
     pred = []

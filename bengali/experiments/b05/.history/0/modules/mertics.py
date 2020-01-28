@@ -3,7 +3,7 @@ import tensorflow as tf
 from sklearn.metrics import recall_score
 
 
-def hmar(fa, val):
+def hmar_incorrect(fa, val):
     
     gt = []
     pred = []
