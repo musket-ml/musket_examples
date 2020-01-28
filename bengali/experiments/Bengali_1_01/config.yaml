@@ -33,9 +33,9 @@ folds_count: 1
 testSplit: 0.1
 validationSplit: 0.1   
 
-final_metrics: [ hmar ]
+final_metrics: [ hmar_incorrect ]
 
-experiment_result: hmar
+experiment_result: hmar_incorrect
 
 callbacks: #configure some minimal callbacks
   EarlyStopping:

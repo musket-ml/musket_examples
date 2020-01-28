@@ -20,27 +20,27 @@ batch: 36 # 60 works fine in fact
 lr: 0.001 
 #dropout: 0.25 it seems to suck
 
-primary_metric: val_hmar
+primary_metric: val_hmar_incorrect
 
 primary_metric_mode: max
 
 folds_count: 1
 validationSplit: 0.1   
 
-final_metrics: [ hmar ]
+final_metrics: [ hmar_incorrect ]
 
-experiment_result: hmar
+experiment_result: hmar_incorrect
 
 callbacks:
   EarlyStopping:
     patience: 10
-    monitor: val_hmar
+    monitor: val_hmar_incorrect
     mode: max
     verbose: 1
   ReduceLROnPlateau:
     patience: 2
     factor: 0.3
-    monitor: val_hmar
+    monitor: val_hmar_incorrect
     mode: max
     cooldown: 1
     verbose: 1 

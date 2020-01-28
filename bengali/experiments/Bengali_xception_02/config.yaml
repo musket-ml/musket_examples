@@ -20,16 +20,16 @@ batch: 36
 lr: 0.001 
 dropout: 0.25
 
-primary_metric: val_hmar
+primary_metric: val_hmar_incorrect
 
 primary_metric_mode: max
 
 folds_count: 1
 validationSplit: 0.1   
 
-final_metrics: [ hmar ]
+final_metrics: [ hmar_incorrect ]
 
-experiment_result: hmar
+experiment_result: hmar_incorrect
 
 callbacks:
   EarlyStopping:

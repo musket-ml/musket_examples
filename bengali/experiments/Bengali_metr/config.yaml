@@ -20,7 +20,7 @@ inference_batch: 384
 
 lr: 0.001 
 
-primary_metric: val_hmar
+primary_metric: hmar_incorrect
 
 primary_metric_mode: max
 
@@ -28,20 +28,20 @@ folds_count: 1
 validationSplit: 0.95   
 
 final_metrics:
-  - hmar:
+  - hmar_incorrect:
 
-experiment_result: hmar
+experiment_result: hmar_incorrect
 
 callbacks:
   EarlyStopping:
     patience: 10
-    monitor: val_hmar
+    monitor: val_hmar_incorrect
     mode: max
     verbose: 1
   ReduceLROnPlateau:
     patience: 2
     factor: 0.3
-    monitor: val_hmar
+    monitor: val_hmar_incorrect
     mode: max
     cooldown: 1
     verbose: 1 

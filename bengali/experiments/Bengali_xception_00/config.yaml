@@ -26,9 +26,9 @@ primary_metric_mode: min
 folds_count: 1
 validationSplit: 0.1   
 
-final_metrics: [ hmar ]
+final_metrics: [ hmar_incorrect ]
 
-experiment_result: hmar
+experiment_result: hmar_incorrect
 
 callbacks:
   EarlyStopping:
