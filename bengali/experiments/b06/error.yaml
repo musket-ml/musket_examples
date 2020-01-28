@@ -1,0 +1,27 @@
+errors:
+- trace: "Traceback (most recent call last):\n  File \"D:\\Python36\\lib\\site-packages\\\
+    musket_core\\parralel.py\", line 64, in run\n    else: self.result=self.func()\n\
+    \  File \"D:\\Python36\\lib\\site-packages\\musket_core\\generic_config.py\",\
+    \ line 328, in __call__\n    self.cfg.generateReports(self.foldsToExecute, self.subsample)\n\
+    \  File \"D:\\Python36\\lib\\site-packages\\musket_core\\generic_config.py\",\
+    \ line 883, in generateReports\n    metrics = self.createSummary(foldsToExecute,subsample)\n\
+    \  File \"D:\\Python36\\lib\\site-packages\\musket_core\\generic_config.py\",\
+    \ line 932, in createSummary\n    self._append_metric(foldsToExecute, ms, m, s)\n\
+    \  File \"D:\\Python36\\lib\\site-packages\\musket_core\\generic_config.py\",\
+    \ line 894, in _append_metric\n    mv = predictions.cross_validation_stat(self,\
+    \ m, s, folds=foldsToExecute)\n  File \"D:\\Python36\\lib\\site-packages\\musket_core\\\
+    predictions.py\", line 159, in cross_validation_stat\n    eval_metric = generic_config.eval_metric(val,\
+    \ metric, cfg.get_eval_batch())\n  File \"D:\\Python36\\lib\\site-packages\\musket_core\\\
+    generic_config.py\", line 263, in eval_metric\n    result = applyFunctionToDS(predsDS,\
+    \ func, batch_size)\n  File \"D:\\Python36\\lib\\site-packages\\musket_core\\\
+    generic_config.py\", line 277, in applyFunctionToDS\n    items = dsWithPredictions[ind:end]\n\
+    \  File \"D:\\Python36\\lib\\site-packages\\musket_core\\preprocessing.py\", line\
+    \ 92, in __getitem__\n    newPi = self.execute_transformation(pi)\n  File \"D:\\\
+    Python36\\lib\\site-packages\\musket_core\\preprocessing.py\", line 99, in execute_transformation\n\
+    \    result = self.func(arg, **self.kw)\n  File \"D:\\Python36\\lib\\site-packages\\\
+    musket_core\\predictions.py\", line 192, in applyThreshold\n    thresholded =\
+    \ dsItem.prediction > threshold\nValueError: The truth value of an array with\
+    \ more than one element is ambiguous. Use a.any() or a.all()\n"
+  type: <class 'ValueError'>
+  value: The truth value of an array with more than one element is ambiguous. Use
+    a.any() or a.all()
