@@ -1,0 +1,56 @@
+#%Musket Generic 1.0
+imports: [musket_text.preprocessors]
+declarations: 
+   lstm2: 
+      parameters: [count]
+      shared: true
+      body:       
+       - word_indexes_embedding: [ glove.6B.300d.txt ]
+       - bidirectional:             
+           - cuDNNLSTM: [count, true]           
+       - bidirectional:    
+           - cuDNNLSTM: [count/2, false]            
+   net:
+       - euclidean-dist:    
+           - lstm2: [100]
+           - lstm2: [100]
+       - dense: 
+          activation: tanh
+          units: 40
+       - dropout: 0.3       
+       - dense: [1,sigmoid]
+   pr-block:
+     - tokenize: 
+     - tokens_to_indexes: 
+         maxLen: 80
+folds_count: 1
+testSplit: 0.2       
+preprocessing:
+  - transform-preprocessor: 
+      - pr-block: 
+      - pr-block: 
+  - disk-cache:    
+architecture: net 
+optimizer: adam  
+batch: 512 
+stages:
+  - epochs: 4  
+loss: binary_crossentropy      
+stratified: false 
+primary_metric: log_loss 
+primary_metric_mode: min
+callbacks:
+  EarlyStopping:
+    patience: 100
+    monitor: val_binary_accuracy
+    verbose: 1
+  ReduceLROnPlateau: 
+    patience: 8
+    factor: 0.5
+    monitor: val_binary_accuracy
+    mode: auto  
+    cooldown: 5
+    verbose: 1     
+metrics: [binary_accuracy, log_loss]    
+dataset: 
+    get_train_siamic: []

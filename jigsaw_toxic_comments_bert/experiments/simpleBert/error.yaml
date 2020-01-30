@@ -1,0 +1,19 @@
+errors:
+- trace: "Traceback (most recent call last):\n  File \"C:\\Users\\32kda\\AppData\\\
+    Local\\Programs\\Python\\Python36\\lib\\site-packages\\musket_core\\experiment.py\"\
+    , line 269, in fit\n    units_of_work=units_of_work+cfg.fit(parallel=True)\n \
+    \ File \"C:\\Users\\32kda\\AppData\\Local\\Programs\\Python\\Python36\\lib\\site-packages\\\
+    musket_core\\generic.py\", line 184, in fit\n    dataset = self.init_shapes(dataset)\n\
+    \  File \"C:\\Users\\32kda\\AppData\\Local\\Programs\\Python\\Python36\\lib\\\
+    site-packages\\musket_core\\generic.py\", line 193, in init_shapes\n    dataset\
+    \ = self.get_dataset()\n  File \"C:\\Users\\32kda\\AppData\\Local\\Programs\\\
+    Python\\Python36\\lib\\site-packages\\musket_core\\generic_config.py\", line 870,\
+    \ in get_dataset\n    self._dataset=self.parse_dataset()\n  File \"C:\\Users\\\
+    32kda\\AppData\\Local\\Programs\\Python\\Python36\\lib\\site-packages\\musket_core\\\
+    generic_config.py\", line 1088, in parse_dataset\n    dataset = net.create_dataset_from_config(self.declarations,\
+    \ fw, self.imports)\n  File \"C:\\Users\\32kda\\AppData\\Local\\Programs\\Python\\\
+    Python36\\lib\\site-packages\\musket_core\\net_declaration.py\", line 623, in\
+    \ create_dataset_from_config\n    out.name=str(name)\nAttributeError: 'NoneType'\
+    \ object has no attribute 'name'\n"
+  type: <class 'AttributeError'>
+  value: '''NoneType'' object has no attribute ''name'''

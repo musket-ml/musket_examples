@@ -1,0 +1,2 @@
+dependencies: ['kaggle.dataset://maxjeblick/bert-pretrained-models','kaggle.competition://quora-question-pairs',
+  'kaggle.dataset://thanakomsn/glove6b300dtxt']

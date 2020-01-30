@@ -1,0 +1,40 @@
+#%Musket Generic 1.0
+imports: [musket_text.preprocessors]
+declarations: 
+   net:
+      body:
+       - bert:
+       - takeFirstToken:
+       - dense: [300, tanh] 
+       - dense: [1, sigmoid] #one output - simple yes/no question          
+preprocessing: 
+  - preprocess: #our preprocessor link - it will make two question text one text 
+  - lowercase:  
+  - text_to_bert_input: [ "/uncased_L-12_H-768_A-12/uncased_L-12_H-768_A-12", 100 ]
+folds_count: 1 #just one fold to see how it behaves
+testSplit: 0.2
+dumpPredictionsToCSV: true       
+architecture: net  
+optimizer: adam   
+batch: 16 
+stages:
+  - epochs: 4  
+loss: binary_crossentropy      
+lr: 0.00005
+stratified: false 
+primary_metric: val_binary_accuracy
+metrics: [binary_accuracy ]
+callbacks:
+  LRVariator: #Bert fine tuning requires custom LR schedule to perform well   
+     fromVal: 0  
+     toVal: 0.00005 
+     style: linear     
+     relSize: 0.2
+     then: 
+         LRVariator: 
+             fromVal: 0.00005
+             toVal: 0 
+             relSize: 4                
+             style: linear    
+dataset: 
+    get_train: []
