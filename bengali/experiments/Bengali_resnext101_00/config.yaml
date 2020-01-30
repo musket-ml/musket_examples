@@ -1,0 +1,56 @@
+#%Musket Classification 1.0
+
+architecture: resnext101
+
+classes: [168, 11, 7]
+
+activation:
+  - softmax
+  - softmax
+  - softmax
+
+weights: imagenet
+
+shape: [224, 224, 3]
+
+optimizer: Adam
+
+batch: 36
+
+lr: 0.001 
+
+primary_metric: val_loss
+
+primary_metric_mode: max
+
+folds_count: 1
+validationSplit: 0.1   
+
+final_metrics: [ hmar_incorrect ]
+
+experiment_result: hmar_incorrect
+
+callbacks:
+  EarlyStopping:
+    patience: 10
+    monitor: val_macro_f1
+    mode: max
+    verbose: 1
+  ReduceLROnPlateau:
+    patience: 2
+    factor: 0.3
+    monitor: val_loss
+    mode: max
+    cooldown: 1
+    verbose: 1 
+
+loss:
+  - categorical_crossentropy
+  - categorical_crossentropy
+  - categorical_crossentropy 
+
+stages:
+  - epochs: 15
+
+dataset:
+   getBengali0: []

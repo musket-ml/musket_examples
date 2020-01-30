@@ -1,0 +1,27 @@
+errors:
+- trace: "Traceback (most recent call last):\n  File \"D:\\Python36\\lib\\site-packages\\\
+    musket_core\\parralel.py\", line 64, in run\n    else: self.result=self.func()\n\
+    \  File \"D:\\Python36\\lib\\site-packages\\musket_core\\experiment.py\", line\
+    \ 264, in <lambda>\n    units_of_work.append(Task(lambda :cfg.generateReports()))\n\
+    \  File \"D:\\Python36\\lib\\site-packages\\musket_core\\generic_config.py\",\
+    \ line 883, in generateReports\n    metrics = self.createSummary(foldsToExecute,subsample)\n\
+    \  File \"D:\\Python36\\lib\\site-packages\\musket_core\\generic_config.py\",\
+    \ line 932, in createSummary\n    self._append_metric(foldsToExecute, ms, m, s)\n\
+    \  File \"D:\\Python36\\lib\\site-packages\\musket_core\\generic_config.py\",\
+    \ line 894, in _append_metric\n    mv = predictions.cross_validation_stat(self,\
+    \ m, s, folds=foldsToExecute)\n  File \"D:\\Python36\\lib\\site-packages\\musket_core\\\
+    predictions.py\", line 137, in cross_validation_stat\n    val=cfg.predictions(\"\
+    validation\",i,stage)\n  File \"D:\\Python36\\lib\\site-packages\\musket_core\\\
+    generic_config.py\", line 609, in predictions\n    return musket_core.predictions.get_predictions(self,name,fold,stage)\n\
+    \  File \"D:\\Python36\\lib\\site-packages\\musket_core\\predictions.py\", line\
+    \ 110, in get_predictions\n    return Prediction(cfg,fold,stage,name_or_ds,None).calculate()\n\
+    \  File \"D:\\Python36\\lib\\site-packages\\musket_core\\predictions.py\", line\
+    \ 46, in calculate\n    return self.cfg.load_writeable_dataset(ds, path)\n  File\
+    \ \"D:\\Python36\\lib\\site-packages\\musket_core\\generic_config.py\", line 551,\
+    \ in load_writeable_dataset\n    rr = np.load(path)\n  File \"D:\\Python36\\lib\\\
+    site-packages\\numpy\\lib\\npyio.py\", line 453, in load\n    pickle_kwargs=pickle_kwargs)\n\
+    \  File \"D:\\Python36\\lib\\site-packages\\numpy\\lib\\format.py\", line 722,\
+    \ in read_array\n    raise ValueError(\"Object arrays cannot be loaded when \"\
+    \nValueError: Object arrays cannot be loaded when allow_pickle=False\n"
+  type: <class 'ValueError'>
+  value: Object arrays cannot be loaded when allow_pickle=False
