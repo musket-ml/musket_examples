@@ -12,7 +12,8 @@ declarations:
        - word_indexes_embedding:  [ glove.6B.300d.txt ]
        - lstm2: [100]       
        - dense: [1,sigmoid]
-folds_count: 5       
+folds_count: 1 #Just 1 fold for demo - increase if necessary
+testSplit: 0.2 # We'll use holdout consisting of 1/5 records          
 preprocessing:
   - preprocess:        
   - tokenize:    
@@ -23,7 +24,7 @@ architecture: net
 optimizer: adam  
 batch: 512 
 stages:
-  - epochs: 4  
+  - epochs: 16  
 loss: binary_crossentropy      
 stratified: false 
 primary_metric: val_binary_accuracy

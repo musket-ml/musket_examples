@@ -14,17 +14,13 @@ declarations:
        - euclidean-dist:    
            - lstm2: [100]
            - lstm2: [100]
-       - dense: 
-          activation: tanh
-          units: 40
-       - dropout: 0.3       
        - dense: [1,sigmoid]
    pr-block:
      - tokenize: 
      - tokens_to_indexes: 
          maxLen: 80
-folds_count: 1
-testSplit: 0.2       
+folds_count: 1 #Just 1 fold for demo - increase if necessary
+testSplit: 0.2 # We'll use holdout consisting of 1/5 records
 preprocessing:
   - transform-preprocessor: 
       - pr-block: 
@@ -34,11 +30,11 @@ architecture: net
 optimizer: adam  
 batch: 512 
 stages:
-  - epochs: 4  
+  - epochs: 30  
 loss: binary_crossentropy      
 stratified: false 
-primary_metric: log_loss 
-primary_metric_mode: min
+primary_metric: val_binary_accuracy 
+primary_metric_mode: max
 callbacks:
   EarlyStopping:
     patience: 100
