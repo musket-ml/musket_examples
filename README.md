@@ -4,8 +4,9 @@ This repository contains examples of what and how you may do with a Musket ML. T
 
 ### Text Classification
 * [Quora Insincere Questions Classification](./quora-insincere-questions/README.md)
-### Image segmentation
+* [Quora Question Pairs Classification](./question_pairs/README.md)
 
+### Image segmentation
 * [TGS Salt Identification Challenge](./salt/README.md)
 * [Severstal: Steel Defect Detection](./severstal/README.md)
 
