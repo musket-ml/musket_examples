@@ -14,7 +14,7 @@ declarations:
        - dense: [1,sigmoid]      
    pr-block:
      - lowercase:  
-     - text_to_bert_input: [ "/uncased_L-12_H-768_A-12/uncased_L-12_H-768_A-12", 100 ]
+     - text_to_bert_input: [ "/uncased_L-12_H-768_A-12/uncased_L-12_H-768_A-12", 30 ]
 folds_count: 1
 testSplit: 0.2 
 preprocessing: 
@@ -24,9 +24,9 @@ preprocessing:
   #- disk-cache:
 architecture: net 
 optimizer: adam  
-batch: 16 
+batch: 24 
 stages:
-  - epochs: 4  
+  - epochs: 30  
 loss: binary_crossentropy      
 stratified: false 
 primary_metric: val_binary_accuracy 
