@@ -1,0 +1,52 @@
+#%Musket Generic 1.0
+imports: [musket_text.preprocessors, custom_preprocessors]
+declarations: 
+   lstm2: 
+      parameters: [count]
+      body:       
+       - bidirectional:             
+           - cuDNNLSTM: [count, true]
+       - bidirectional:    
+           - cuDNNLSTM: [count, true]            
+   net:
+       - word_indexes_embedding:  [ glove.6B.300d.txt ]
+       - lstm2: [140]
+       #- reshape: [[100,1]]                     
+       - conv1D:
+          filters: 59985 # This 'magic number' is vocabulary size for Russian in this example, and should be entered manually. Special variables are planned for this in future versions
+          kernel_size: 3
+          padding: same
+          activation : softmax                 
+folds_count: 1       
+preprocessing:  
+  - tokenize_xy:    
+  - tokens_to_indexes:
+       maxLen: 30
+  - y_tokens_to_indexes:
+       maxLen: 30
+       file_name: rus.vocab #We need to store vocabulary after tokenization to be able to use it during prediction
+  - y_wrap:
+          
+architecture: net 
+optimizer: adam  
+batch: 16 
+stages:
+  - epochs: 10  
+loss: sparse_categorical_crossentropy      # We use sparse loss function calculation and sparce metrics to avoid huge memory consumption because of having ~60000 outputs - one per each word
+stratified: false 
+primary_metric: val_sparse_categorical_accuracy
+callbacks:
+  EarlyStopping:
+    patience: 100
+    monitor: val_sparse_categorical_accuracy
+    verbose: 1
+  ReduceLROnPlateau: 
+    patience: 8
+    factor: 0.5
+    monitor: val_sparse_categorical_accuracy
+    mode: auto  
+    cooldown: 5
+    verbose: 1     
+metrics: [sparse_categorical_accuracy ]    
+dataset: 
+    get_train: []    

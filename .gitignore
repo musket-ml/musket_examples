@@ -1,3 +1,13 @@
 .meta/
 .metadata/
 .history/
+*.npy
+*.folds_split
+config.yaml.*
+*.weights
+*.embcache
+*.vocab
+metrics-*.csv
+error.yaml
+summary.yaml
+data/
