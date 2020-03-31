@@ -11,4 +11,4 @@ This repository contains examples of what and how you may do with a Musket ML. T
 * [Severstal: Steel Defect Detection](./severstal/README.md)
 
 ## Natural Language processing/RNNs
-* (./translation_example/README.md) Sequnce To Sequence Machine Translation example
+* [Sequnce To Sequence Machine Translation example](./translation_example/README.md) 
