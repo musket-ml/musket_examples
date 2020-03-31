@@ -10,3 +10,5 @@ This repository contains examples of what and how you may do with a Musket ML. T
 * [TGS Salt Identification Challenge](./salt/README.md)
 * [Severstal: Steel Defect Detection](./severstal/README.md)
 
+## Natural Language processing/RNNs
+* (./translation_example/README.md) Sequnce To Sequence Machine Translation example
